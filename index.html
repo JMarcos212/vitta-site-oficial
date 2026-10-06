@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<!--
+=========================================================
+VITTA — ÍNDICE DE PENDÊNCIAS
+
+Pesquise por: [EDITAR DEPOIS]
+
+[02] Print mobile: tela inicial / visão geral da carteira (hero).
+[03] Print mobile: vacinas da carteira.
+[04] Print mobile: Minha família.
+[05] Print mobile: notificações.
+[07] Print Web: dashboard do profissional.
+[08] URL oficial do Instagram.
+
+Nos links pendentes, substitua href="#" pela URL confirmada,
+remova data-pending e o texto “Link em breve” / “Em breve”.
+=========================================================
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#02335e">
+  <meta name="description" content="Conheça o Vitta: um projeto de carteira digital de vacinação que conecta usuários e profissionais de saúde. Baixe o aplicativo e leia o artigo científico.">
+  <title>Vitta — Sincronizando cuidado com a vida</title>
+  <link rel="icon" href="assets/images/logo/icone-vitta.jpg" type="image/jpeg">
+  <link rel="preload" href="assets/fonts/poppins-400.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/poppins-700.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Ícones vetoriais de apoio; não representam interfaces do aplicativo. -->
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M5 15v5h14v-5"/></symbol>
+    <symbol id="icon-wallet" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="3"/><path d="M3 9h18m-6 5h6M7 5V3h10v2"/></symbol>
+    <symbol id="icon-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4M12 2V1"/></symbol>
+    <symbol id="icon-family" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3m2-17a3 3 0 0 1 0 6m1 4a5 5 0 0 1 3 4v3"/></symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 6c-3-3-7-3-10-2v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-3-1-7-1-10 2Zm0 0v15"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 5h4m-3 14h2"/></symbol>
+    <symbol id="icon-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M12 17v5m-5 0h10M2 13h20"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/></symbol>
+    <symbol id="icon-document" viewBox="0 0 24 24"><path d="M14 2H5v20h14V7l-5-5Zm0 0v6h5M8 12h8m-8 4h6"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-xl" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand" href="#inicio" aria-label="Vitta — início">
+          <img src="assets/images/logo/logo-vitta-azul-compacta.svg" alt="Vitta" width="112" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir ou fechar menu">
+          <span class="menu-lines" aria-hidden="true"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu-principal">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="#funcionalidades">Funcionalidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="#aplicativo">Aplicativo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#painel">Painel Web</a></li>
+            <li class="nav-item"><a class="nav-link" href="#artigo">Artigo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#acompanhe">Instagram</a></li>
+            <li class="nav-item"><a class="nav-link" href="#equipe">Equipe</a></li>
+          </ul>
+          <a class="button button-primary button-small" href="downloads/vitta-demo1.0.apk" download>
+            Baixar o app <svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <!-- 01 · Hero -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7 hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> Tecnologia a serviço do cuidado</p>
+            <h1 id="hero-title">Vitta, sincronizando <span>cuidado com a vida.</span></h1>
+            <p class="hero-description">Sua vacinação em um só lugar. Uma carteira digital que conecta você, sua família e os profissionais de saúde.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="downloads/vitta-demo1.0.apk" download>
+                <svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg> Baixar o aplicativo
+              </a>
+
+              <a class="button button-outline" href="https://vittaweb-production.up.railway.app/">
+                <span>Acessar Painel Web</span>
+                <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg>
+              </a>
+            </div>
+            <p class="download-note">Download do APK para Android</p>
+          </div>
+          <div class="col-lg-5">
+            <div class="hero-visual">
+              <div class="hero-orbit" aria-hidden="true"></div>
+              <span class="visual-label label-top"><svg class="icon" aria-hidden="true"><use href="#icon-wallet"/></svg> Carteira digital</span>
+              <figure class="hero-preview">
+                <!-- =========================================================
+                     [EDITAR DEPOIS] [02] PRINT DO APLICATIVO — INÍCIO
+                     Tela: Visão geral da carteira. Documentação Mobile, p. 6.
+                     Caminho sugerido: assets/images/mobile/inicio-carteira.png
+                     Substituir o bloco .media-placeholder abaixo por:
+                     <img class="screenshot" src="assets/images/mobile/inicio-carteira.png"
+                          alt="Tela inicial do Vitta com resumo da carteira, familiares e próximas doses"
+                          width="420" height="840" fetchpriority="high">
+                ========================================================= -->
+                <div class="media-placeholder hero-placeholder">
+                  <img class="preview-logo" src="assets/images/logo/logo-vitta-branca-compacta.svg" alt="Vitta" width="112" height="40">
+                  <span class="placeholder-title">Visão geral<br>da carteira</span>
+                  <span class="placeholder-caption">Prévia do aplicativo<br>em breve</span>
+                </div>
+                <figcaption class="visually-hidden">Espaço reservado para uma imagem real da tela inicial do Vitta.</figcaption>
+              </figure>
+              <span class="visual-label label-bottom"><span class="small-dot" aria-hidden="true"></span> Cuidado conectado</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <p>Um projeto de saúde e tecnologia.<br><strong>Feito em Franca, SP.</strong></p>
+          <a class="text-link" href="#sobre">Conheça o Vitta <span class="arrow-down" aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · Sobre -->
+    <section class="section-space about-section" id="sobre" aria-labelledby="sobre-title">
+      <div class="container">
+        <div class="row gy-4 justify-content-between">
+          <div class="col-lg-5">
+            <p class="eyebrow">Sobre o Vitta</p>
+            <h2 id="sobre-title">Acompanhar a vacinação pode ser mais simples.</h2>
+          </div>
+          <div class="col-lg-6 about-copy">
+            <p class="lead-copy">Esquecer uma dose, perder a caderneta ou não encontrar uma informação: o cuidado também passa por esses desafios.</p>
+            <p>O Vitta nasceu para apoiar o acompanhamento da vacinação, com foco inicial em Franca-SP. A proposta reúne registros, lembretes e informações em um ambiente digital acessível.</p>
+            <p>O aplicativo aproxima as pessoas de seu histórico vacinal. O Painel Web permite que profissionais de saúde gerenciem os registros. As duas plataformas compartilham as informações.</p>
+          </div>
+        </div>
+        <div class="connection-strip" aria-label="O aplicativo e o Painel Web compartilham os registros de vacinação">
+          <div><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg><span>Para você e sua família<strong>Aplicativo mobile</strong></span></div>
+          <span class="connection-line" aria-hidden="true"></span>
+          <span class="connection-center">Informações conectadas <span aria-hidden="true">↔</span></span>
+          <span class="connection-line" aria-hidden="true"></span>
+          <div><svg class="icon" aria-hidden="true"><use href="#icon-monitor"/></svg><span>Para profissionais de saúde<strong>Painel Web</strong></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · Funcionalidades: seleção dos recursos documentados -->
+    <section class="section-space features-section" id="funcionalidades" aria-labelledby="funcionalidades-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">Principais funcionalidades</p><h2 id="funcionalidades-title">Mais clareza.<br>Mais cuidado no dia a dia.</h2></div>
+          <p>Recursos que ajudam a organizar o acompanhamento da sua vacinação e de quem está sob seus cuidados.</p>
+        </div>
+        <div class="row g-4 g-lg-5 feature-grid">
+          <div class="col-md-6 col-xl-3"><article class="feature-item">
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-wallet"/></svg></span>
+            <h3>Carteira digital</h3><p>Consulte seu histórico e identifique vacinas aplicadas, próximas doses e doses atrasadas em um só lugar.</p>
+          </article></div>
+          <div class="col-md-6 col-xl-3"><article class="feature-item">
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-bell"/></svg></span>
+            <h3>Lembretes e alertas</h3><p>Acompanhe avisos de doses próximas e atrasadas pela central de notificações do aplicativo.</p>
+          </article></div>
+          <div class="col-md-6 col-xl-3"><article class="feature-item">
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-family"/></svg></span>
+            <h3>Cuidado em família</h3><p>Gerencie dependentes e consulte a carteira de cada pessoa, mantendo os históricos separados.</p>
+          </article></div>
+          <div class="col-md-6 col-xl-3"><article class="feature-item">
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#icon-book"/></svg></span>
+            <h3>Informação acessível</h3><p>Explore o catálogo de vacinas e conteúdos educativos sobre imunização em uma linguagem simples.</p>
+          </article></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · Aplicativo -->
+    <section class="section-space app-section" id="aplicativo" aria-labelledby="aplicativo-title">
+      <div class="container">
+        <div class="section-heading centered-heading">
+          <p class="eyebrow">Conheça o aplicativo</p>
+          <h2 id="aplicativo-title">O cuidado acompanha você.</h2>
+          <p>Da consulta à carteira ao acompanhamento da família, conheça os principais espaços do Vitta.</p>
+        </div>
+        <div class="row g-4 g-xl-5 app-gallery">
+          <div class="col-md-4"><figure class="app-figure">
+            <div class="screen-stage">
+              <!-- =========================================================
+                   [EDITAR DEPOIS] [03] PRINT DO APLICATIVO — CARTEIRA
+                   Tela: Vacinas da carteira. Documentação Mobile, p. 10.
+                   Caminho sugerido: assets/images/mobile/carteira-vacinas.png
+                   Substituir o bloco .media-placeholder abaixo por:
+                   <img class="screenshot" src="assets/images/mobile/carteira-vacinas.png"
+                        alt="Carteira do Vitta com filtros de vacinas aplicadas, próximas e atrasadas"
+                        width="420" height="840" loading="lazy">
+              ========================================================= -->
+              <div class="media-placeholder app-placeholder"><svg class="icon preview-icon" aria-hidden="true"><use href="#icon-wallet"/></svg><span class="placeholder-title">Sua carteira</span><span class="placeholder-caption">Imagem do aplicativo em breve</span></div>
+            </div>
+            <figcaption><span class="figure-number">01</span><div><h3>Seu histórico organizado</h3><p>Encontre os registros e consulte os detalhes de cada aplicação.</p></div></figcaption>
+          </figure></div>
+          <div class="col-md-4"><figure class="app-figure">
+            <div class="screen-stage stage-family">
+              <!-- =========================================================
+                   [EDITAR DEPOIS] [04] PRINT DO APLICATIVO — FAMÍLIA
+                   Tela: Minha família. Documentação Mobile, p. 8.
+                   Caminho sugerido: assets/images/mobile/minha-familia.png
+                   Substituir o bloco .media-placeholder abaixo por:
+                   <img class="screenshot" src="assets/images/mobile/minha-familia.png"
+                        alt="Tela Minha família do Vitta com seleção de carteiras dos dependentes"
+                        width="420" height="840" loading="lazy">
+              ========================================================= -->
+              <div class="media-placeholder app-placeholder"><svg class="icon preview-icon" aria-hidden="true"><use href="#icon-family"/></svg><span class="placeholder-title">Minha família</span><span class="placeholder-caption">Imagem do aplicativo em breve</span></div>
+            </div>
+            <figcaption><span class="figure-number">02</span><div><h3>Cada pessoa, sua carteira</h3><p>Alterne entre o seu perfil e os familiares vinculados à sua conta.</p></div></figcaption>
+          </figure></div>
+          <div class="col-md-4"><figure class="app-figure">
+            <div class="screen-stage">
+              <!-- =========================================================
+                   [EDITAR DEPOIS] [05] PRINT DO APLICATIVO — NOTIFICAÇÕES
+                   Tela: Notificações. Documentação Mobile, p. 7.
+                   Caminho sugerido: assets/images/mobile/notificacoes.png
+                   Substituir o bloco .media-placeholder abaixo por:
+                   <img class="screenshot" src="assets/images/mobile/notificacoes.png"
+                        alt="Central de notificações do Vitta com atualizações da carteira"
+                        width="420" height="840" loading="lazy">
+              ========================================================= -->
+              <div class="media-placeholder app-placeholder"><svg class="icon preview-icon" aria-hidden="true"><use href="#icon-bell"/></svg><span class="placeholder-title">Notificações</span><span class="placeholder-caption">Imagem do aplicativo em breve</span></div>
+            </div>
+            <figcaption><span class="figure-number">03</span><div><h3>Atenção às próximas doses</h3><p>Consulte os avisos relacionados à sua situação vacinal.</p></div></figcaption>
+          </figure></div>
+        </div>
+        <div class="app-download"><a class="button button-primary" href="downloads/vitta-demo1.0.apk" download><svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg> Baixar Vitta para Android</a><span>Aplicativo disponível em APK</span></div>
+      </div>
+    </section>
+
+    <!-- 05 · Painel Web -->
+    <section class="section-space panel-section" id="painel" aria-labelledby="painel-title">
+      <div class="container">
+        <div class="row align-items-center gy-5 gx-xl-5">
+          <div class="col-lg-5">
+            <p class="eyebrow">Painel Web · Ambiente profissional</p>
+            <h2 id="painel-title">Conectando quem cuida a quem precisa de cuidado.</h2>
+            <p class="panel-description">Um espaço para profissionais de saúde cadastrarem pacientes, registrarem aplicações e consultarem carteiras de vacinação.</p>
+            <ul class="check-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg> Gerenciamento de pacientes e vacinas</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg> Registro e histórico de aplicações</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg> Visão geral e relatórios de vacinação</li>
+            </ul>
+            <p class="integration-note">Os registros do painel integram a mesma estrutura de dados consultada no aplicativo.</p>
+
+            <a class="button button-white" href="https://vittaweb-production.up.railway.app/"><span>Acessar Painel Web</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+            <p class="panel-access-note">Acesso para profissionais autorizados · Projetado para desktop</p>
+          </div>
+          <div class="col-lg-7">
+            <figure class="panel-figure">
+              <!-- =========================================================
+                   [EDITAR DEPOIS] [07] PRINT DO PAINEL WEB — DASHBOARD
+                   Tela: Dashboard. Documentação das Telas Web, p. 4 (PDF).
+                   Caminho sugerido: assets/images/painel/dashboard-profissional.png
+                   Substituir o bloco .media-placeholder abaixo por:
+                   <img class="screenshot panel-screenshot" src="assets/images/painel/dashboard-profissional.png"
+                        alt="Dashboard do Vitta com visão geral, aplicações recentes e ações para profissionais"
+                        width="1440" height="900" loading="lazy">
+              ========================================================= -->
+              <div class="media-placeholder panel-placeholder"><svg class="icon preview-icon" aria-hidden="true"><use href="#icon-monitor"/></svg><span class="placeholder-title">Visão geral do painel</span><span class="placeholder-caption">Imagem do ambiente profissional em breve</span></div>
+              <figcaption><span class="small-dot" aria-hidden="true"></span> Aplicativo e painel. Informações conectadas.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 · Artigo científico -->
+    <section class="section-space article-section" id="artigo" aria-labelledby="artigo-title">
+      <div class="container">
+        <div class="row gy-5 align-items-center justify-content-between">
+          <div class="col-lg-5">
+            <p class="eyebrow">Artigo científico</p>
+            <h2 id="artigo-title">A pesquisa por trás do cuidado.</h2>
+            <p class="section-description">O trabalho investiga dificuldades no acompanhamento da vacinação e apresenta o desenvolvimento do Vitta como proposta de apoio à organização dos registros vacinais.</p>
+            <a class="text-link" href="downloads/Artigo_Cientifico_Vitta.pdf" download>Baixar o artigo em PDF <svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg></a>
+          </div>
+          <div class="col-lg-6">
+            <article class="research-card">
+              <div class="research-meta"><svg class="icon" aria-hidden="true"><use href="#icon-document"/></svg><span>Trabalho de Conclusão de Curso</span><span>2026</span></div>
+              <h3>Problemas da vacinação no Brasil: as dificuldades que geram o abandono vacinal</h3>
+              <p>ETEC Dr. Júlio Cardoso<br>Técnico em Desenvolvimento de Sistemas · Franca-SP</p>
+              <a class="text-link" href="downloads/Artigo_Cientifico_Vitta.pdf" target="_blank" rel="noopener">Ler artigo científico <span class="visually-hidden">(PDF, abre em nova aba)</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 · Instagram -->
+    <section class="social-section" id="acompanhe" aria-labelledby="acompanhe-title">
+      <div class="container">
+        <div class="social-band">
+          <div class="social-icon"><svg class="icon" aria-hidden="true"><use href="#icon-instagram"/></svg></div>
+          <div class="social-copy"><p class="eyebrow">Acompanhe o projeto</p><h2 id="acompanhe-title">O Vitta também no seu feed.</h2><p>Acompanhe o projeto pelo Instagram.</p></div>
+          <!-- =========================================================
+               [EDITAR DEPOIS] [08] LINK DO INSTAGRAM
+               Substituir href pelo endereço confirmado do perfil oficial.
+               Remover data-pending e o texto “Em breve”.
+          ========================================================= -->
+          <a class="button button-outline" href="https://www.instagram.com/vitta.tcc?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="><span>Acessar Instagram</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 · Equipe -->
+    <section class="section-space team-section" id="equipe" aria-labelledby="equipe-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">Quem faz o Vitta</p><h2 id="equipe-title">Pessoas por trás<br>de cada conexão.</h2></div>
+          <p>Um projeto desenvolvido por alunos do curso Técnico em Desenvolvimento de Sistemas da ETEC Dr. Júlio Cardoso, em Franca-SP.</p>
+        </div>
+        <div class="team-grid">
+
+          <article class="team-member"> <img class="team-photo" src="assets/images/equipe/davi-tavares.png" alt="Davi Tavares" width="400" height="480" loading="lazy"><h3>Davi Tavares</h3><p>Analista e Designer</p></article>
+
+          <article class="team-member"><img class="team-photo" src="assets/images/equipe/eduardo-carvalho.png" alt="Eduardo Carvalho" width="400" height="480" loading="lazy"><h3>Eduardo Carvalho</h3><p>Desenvolvedor</p></article>
+
+          <article class="team-member"><img class="team-photo" src="assets/images/equipe/gabrielly-martins.png" alt="Gabrielly Martins" width="400" height="480" loading="lazy"><h3>Gabrielly Martins</h3><p>Analista e Designer</p></article>
+
+          <article class="team-member"><img class="team-photo" src="assets/images/equipe/heitor-testi.png" alt="Heitor Testi" width="400" height="480" loading="lazy"><h3>Heitor Testi</h3><p>Desenvolvedor</p></article>
+
+          <article class="team-member"><img class="team-photo" src="assets/images/equipe/joao-peixoto.png" alt="João Peixoto" width="400" height="480" loading="lazy"><h3>João Peixoto</h3><p>Designer e Desenvolvedor</p></article>
+        </div>
+        <div class="academic-note"><span class="small-dot" aria-hidden="true"></span> Projeto acadêmico · Trabalho de Conclusão de Curso · 2026</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 09 · Rodapé -->
+  <footer class="site-footer" aria-label="Rodapé">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand"><a href="#inicio" aria-label="Vitta — voltar ao início"><img src="assets/images/logo/logo-vitta-branca-compacta.svg" alt="Vitta" width="140" height="50" loading="lazy"></a><p>Vitta, sincronizando cuidado com a vida.</p></div>
+        <nav aria-label="Links do rodapé"><a href="#sobre">Sobre o projeto</a><a href="#painel">Painel Web</a><a href="#acompanhe">Instagram</a><a href="#equipe">Equipe</a><a href="downloads/Artigo_Cientifico_Vitta.pdf" target="_blank" rel="noopener">Artigo científico <span class="visually-hidden">(PDF, abre em nova aba)</span></a><a href="downloads/vitta-demo1.0.apk" download>Baixar APK</a></nav>
+      </div>
+      <div class="footer-bottom"><p>Vitta · Projeto acadêmico · 2026</p><p>ETEC Dr. Júlio Cardoso · Franca-SP</p><a href="#inicio">Voltar ao início <span aria-hidden="true">↑</span></a></div>
+    </div>
+  </footer>
+  <div class="site-notice" id="site-notice" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
