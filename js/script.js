@@ -77,3 +77,47 @@ if ('IntersectionObserver' in window) {
   }, { rootMargin: '-15% 0px -55% 0px', threshold: 0 });
   sections.forEach((section) => observer.observe(section));
 }
+
+// Expandir a demonstração do Painel Web sem substituir ou reiniciar o vídeo.
+const panelFrame = document.querySelector('.panel-video-frame');
+const panelFullscreenButton = panelFrame?.querySelector('.panel-fullscreen-button');
+
+if (panelFrame && panelFullscreenButton) {
+  const expandIcon = panelFullscreenButton.querySelector('.panel-fullscreen-icon--expand');
+  const exitIcon = panelFullscreenButton.querySelector('.panel-fullscreen-icon--exit');
+  const supportsFullscreen = document.fullscreenEnabled !== false
+    && typeof panelFrame.requestFullscreen === 'function'
+    && typeof document.exitFullscreen === 'function';
+
+  const updatePanelFullscreenState = () => {
+    const isPanelFullscreen = document.fullscreenElement === panelFrame;
+    panelFullscreenButton.setAttribute('aria-pressed', String(isPanelFullscreen));
+    panelFullscreenButton.setAttribute(
+      'aria-label',
+      isPanelFullscreen
+        ? 'Sair da visualização em tela cheia'
+        : 'Assistir demonstração do Painel Web em tela cheia'
+    );
+    if (expandIcon) expandIcon.hidden = isPanelFullscreen;
+    if (exitIcon) exitIcon.hidden = !isPanelFullscreen;
+  };
+
+  if (supportsFullscreen) {
+    panelFullscreenButton.hidden = false;
+    updatePanelFullscreenState();
+
+    panelFullscreenButton.addEventListener('click', async () => {
+      try {
+        if (document.fullscreenElement === panelFrame) {
+          await document.exitFullscreen();
+        } else if (!document.fullscreenElement) {
+          await panelFrame.requestFullscreen();
+        }
+      } catch {
+        updatePanelFullscreenState();
+      }
+    });
+
+    document.addEventListener('fullscreenchange', updatePanelFullscreenState);
+  }
+}
