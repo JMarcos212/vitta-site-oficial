@@ -92,8 +92,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--vitta-secondary
 .hero-orbit::before { content: ''; position: absolute; inset: 24px; background: var(--vitta-surface); border-radius: 50%; }
 .hero-orbit::after { content: ''; position: absolute; inset: 55px; border: 1px solid var(--vitta-border); border-radius: 50%; }
 .hero-preview { width: 236px; max-width: 100%; margin: 0; }
-/* Base sem espaçamento interno; cantos inferiores menores preservam a interface. */
-.mobile-video-frame { position: relative; width: 100%; overflow: hidden; border: 6px solid #172b3b; border-radius: 32px 32px 18px 18px; background: var(--vitta-white); box-shadow: 0 20px 55px rgba(2, 51, 94, .09); }
+/* Cantos simétricos; o overflow recorta a tela pelo raio interno da borda de 6px. */
+.mobile-video-frame { position: relative; width: 100%; overflow: hidden; border: 6px solid #172b3b; border-radius: 32px; background: var(--vitta-white); box-shadow: 0 20px 55px rgba(2, 51, 94, .09); }
 .mobile-status-bar { display: flex; align-items: center; justify-content: space-between; min-height: 26px; padding: 7px 14px 6px; color: var(--vitta-primary); background: var(--vitta-white); font-size: .6rem; line-height: 1; }
 .mobile-status-time { font-weight: 600; font-variant-numeric: tabular-nums; }
 .mobile-status-icons { display: flex; align-items: center; gap: 5px; }
@@ -225,6 +225,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--vitta-secondary
 .site-footer { background: var(--vitta-primary); color: #c6dce9; padding: 55px 0 22px; }
 .footer-top { display: flex; justify-content: space-between; gap: 50px; padding-bottom: 40px; }
 .footer-brand p { margin: 20px 0 0; font-size: .76rem; }
+.footer-brand .footer-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 0 6px; margin-top: 12px; }
+.footer-contact a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; overflow-wrap: anywhere; }
 .footer-top nav { display: grid; grid-template-columns: repeat(3, auto); gap: 12px 32px; align-content: center; }
 .site-footer a { color: var(--vitta-white); text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
