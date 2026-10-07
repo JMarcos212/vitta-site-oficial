@@ -238,6 +238,10 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--vitta-secondary
 .team-photo { object-fit: cover; }
 .team-member h3 { font-size: .94rem; line-height: 1.5; margin: 0 0 6px; text-wrap: initial; }
 .team-member > p { font-size: .72rem; margin: 0; }
+.team-advisor { max-width: 420px; margin: 54px auto 0; text-align: center; }
+.team-advisor .eyebrow { justify-content: center; margin-bottom: 9px; font-size: .64rem; }
+.team-advisor h3 { font-size: 1.05rem; margin: 0 0 5px; }
+.team-advisor > p:last-child { margin: 0; font-size: .72rem; }
 .academic-note { display: flex; align-items: center; gap: 10px; font-size: .76rem; border-top: 1px solid var(--vitta-border); margin-top: 44px; padding-top: 26px; }
 
 /* Rodapé e aviso para links pendentes */
@@ -360,6 +364,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--vitta-secondary
   .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 18px; }
   .team-member h3 { font-size: .9rem; }
   .team-member > p { font-size: .68rem; }
+  .team-advisor { margin-top: 40px; }
+  .team-advisor h3 { font-size: .98rem; }
+  .team-advisor > p:last-child { font-size: .68rem; }
   .academic-note { font-size: .67rem; align-items: baseline; }
   .footer-top nav { grid-template-columns: repeat(2, auto); gap: 8px 30px; }
   .footer-top nav a { min-height: 44px; }
