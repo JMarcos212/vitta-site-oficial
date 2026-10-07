@@ -5,11 +5,7 @@ VITTA — ÍNDICE DE PENDÊNCIAS
 
 Pesquise por: [EDITAR DEPOIS]
 
-[02] Print mobile: tela inicial / visão geral da carteira (hero).
-[03] Print mobile: vacinas da carteira.
-[04] Print mobile: Minha família.
-[05] Print mobile: notificações.
-[07] Print Web: dashboard do profissional.
+
 
 Nos links pendentes, substitua href="#" pela URL confirmada,
 remova data-pending e o texto “Link em breve” / “Em breve”.
@@ -36,6 +32,7 @@ remova data-pending e o texto “Link em breve” / “Em breve”.
   <!-- Ícones vetoriais de apoio; não representam interfaces do aplicativo. -->
   <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14M10 3H3v18h18v-7"/></symbol>
     <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M5 15v5h14v-5"/></symbol>
     <symbol id="icon-wallet" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="3"/><path d="M3 9h18m-6 5h6M7 5V3h10v2"/></symbol>
     <symbol id="icon-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4M12 2V1"/></symbol>
@@ -65,6 +62,7 @@ remova data-pending e o texto “Link em breve” / “Em breve”.
             <li class="nav-item"><a class="nav-link" href="#painel">Painel Web</a></li>
             <li class="nav-item"><a class="nav-link" href="#artigo">Artigo</a></li>
             <li class="nav-item"><a class="nav-link" href="#acompanhe">Instagram</a></li>
+            <li class="nav-item"><a class="nav-link" href="#avalie">Avalie</a></li>
             <li class="nav-item"><a class="nav-link" href="#equipe">Equipe</a></li>
           </ul>
           <a class="button button-primary button-small" href="https://github.com/JMarcos212/vitta-site-oficial/releases/latest/download/vitta.apk" download>
@@ -85,37 +83,41 @@ remova data-pending e o texto “Link em breve” / “Em breve”.
             <h1 id="hero-title">Vitta, sincronizando <span>cuidado com a vida.</span></h1>
             <p class="hero-description">Sua vacinação em um só lugar. Uma carteira digital que conecta você, sua família e os profissionais de saúde.</p>
             <div class="hero-actions">
-              <a class="button button-primary" href="https://github.com/JMarcos212/vitta-site-oficial/releases/latest/download/vitta.apk" download>
-                <svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg> Baixar o aplicativo
-              </a>
-
-              <a class="button button-outline" href="https://vittaweb-production.up.railway.app/">
-                <span>Acessar Painel Web</span>
-                <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg>
-              </a>
+              <div class="hero-action-group">
+                <a class="button button-primary" href="https://github.com/JMarcos212/vitta-site-oficial/releases/latest/download/vitta.apk" download aria-describedby="hero-download-note">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg> Baixar o aplicativo
+                </a>
+                <p class="download-note" id="hero-download-note">Download do APK para Android</p>
+              </div>
+              <div class="hero-action-group">
+                <a class="button button-outline" href="https://docs.google.com/forms/d/e/1FAIpQLScBXfQCJvDW2axwwxEhP4bkhi1RSPgIOHphr8_38aPlPJkaCA/viewform?usp=sharing&amp;ouid=107312742165818027922" target="_blank" rel="noopener noreferrer" aria-describedby="hero-avalie-link-note">
+                  <span>Avaliar o Vitta</span><svg class="icon" aria-hidden="true"><use href="#icon-external"/></svg>
+                </a>
+                <p class="download-note" id="hero-avalie-link-note">Google Forms · Abre em nova aba</p>
+              </div>
             </div>
-            <p class="download-note">Download do APK para Android</p>
           </div>
           <div class="col-lg-5">
             <div class="hero-visual">
               <div class="hero-orbit" aria-hidden="true"></div>
               <span class="visual-label label-top"><svg class="icon" aria-hidden="true"><use href="#icon-wallet"/></svg> Carteira digital</span>
               <figure class="hero-preview">
-                <!-- =========================================================
-                     [EDITAR DEPOIS] [02] PRINT DO APLICATIVO — INÍCIO
-                     Tela: Visão geral da carteira. Documentação Mobile, p. 6.
-                     Caminho sugerido: assets/images/mobile/inicio-carteira.png
-                     Substituir o bloco .media-placeholder abaixo por:
-                     <img class="screenshot" src="assets/images/mobile/inicio-carteira.png"
-                          alt="Tela inicial do Vitta com resumo da carteira, familiares e próximas doses"
-                          width="420" height="840" fetchpriority="high">
-                ========================================================= -->
-                <div class="media-placeholder hero-placeholder">
-                  <img class="preview-logo" src="assets/images/logo/logo-vitta-branca-compacta.svg" alt="Vitta" width="112" height="40">
-                  <span class="placeholder-title">Visão geral<br>da carteira</span>
-                  <span class="placeholder-caption">Prévia do aplicativo<br>em breve</span>
+
+                <div class="mobile-video-frame">
+                  <div class="mobile-status-bar" aria-hidden="true">
+                    <span class="mobile-status-time">9:41</span>
+                    <div class="mobile-status-icons">
+                      <span class="mobile-status-signal"><i></i><i></i><i></i><i></i></span>
+                      <svg class="mobile-status-wifi" viewBox="0 0 16 12" fill="none"><path d="M1 3.5a11 11 0 0 1 14 0M3.5 6a7 7 0 0 1 9 0M6 8.5a3 3 0 0 1 4 0"/><circle cx="8" cy="11" r=".8" fill="currentColor" stroke="none"/></svg>
+                      <span class="mobile-status-battery"></span>
+                    </div>
+                  </div>
+                  <video class="demo-video hero-demo-video" autoplay muted loop playsinline preload="metadata" disablepictureinpicture disableremoteplayback poster="assets/images/logo/logo-vitta-branca-compacta.svg" aria-label="Demonstração do aplicativo Vitta">
+                    <source src="assets/videos/demo-mobile.mp4" type="video/mp4">
+                    Seu navegador não suporta a reprodução deste vídeo.
+                  </video>
                 </div>
-                <figcaption class="visually-hidden">Espaço reservado para uma imagem real da tela inicial do Vitta.</figcaption>
+                <figcaption class="visually-hidden">Demonstração do aplicativo Vitta em uma moldura de smartphone.</figcaption>
               </figure>
               <span class="visual-label label-bottom"><span class="small-dot" aria-hidden="true"></span> Cuidado conectado</span>
             </div>
@@ -191,46 +193,22 @@ remova data-pending e o texto “Link em breve” / “Em breve”.
         <div class="row g-4 g-xl-5 app-gallery">
           <div class="col-md-4"><figure class="app-figure">
             <div class="screen-stage">
-              <!-- =========================================================
-                   [EDITAR DEPOIS] [03] PRINT DO APLICATIVO — CARTEIRA
-                   Tela: Vacinas da carteira. Documentação Mobile, p. 10.
-                   Caminho sugerido: assets/images/mobile/carteira-vacinas.png
-                   Substituir o bloco .media-placeholder abaixo por:
-                   <img class="screenshot" src="assets/images/mobile/carteira-vacinas.png"
-                        alt="Carteira do Vitta com filtros de vacinas aplicadas, próximas e atrasadas"
-                        width="420" height="840" loading="lazy">
-              ========================================================= -->
-              <div class="media-placeholder app-placeholder"><svg class="icon preview-icon" aria-hidden="true"><use href="#icon-wallet"/></svg><span class="placeholder-title">Sua carteira</span><span class="placeholder-caption">Imagem do aplicativo em breve</span></div>
+
+              <div><img class="screenshot" src="assets/images/mobile/carteira-vacinas.jpg" alt="Carteira do Vitta com filtros de vacinas aplicadas, próximas e atrasadas" width="420" height="840" loading="lazy"></div>
             </div>
             <figcaption><span class="figure-number">01</span><div><h3>Seu histórico organizado</h3><p>Encontre os registros e consulte os detalhes de cada aplicação.</p></div></figcaption>
           </figure></div>
           <div class="col-md-4"><figure class="app-figure">
             <div class="screen-stage stage-family">
-              <!-- =========================================================
-                   [EDITAR DEPOIS] [04] PRINT DO APLICATIVO — FAMÍLIA
-                   Tela: Minha família. Documentação Mobile, p. 8.
-                   Caminho sugerido: assets/images/mobile/minha-familia.png
-                   Substituir o bloco .media-placeholder abaixo por:
-                   <img class="screenshot" src="assets/images/mobile/minha-familia.png"
-                        alt="Tela Minha família do Vitta com seleção de carteiras dos dependentes"
-                        width="420" height="840" loading="lazy">
-              ========================================================= -->
-              <div class="media-placeholder app-placeholder"><svg class="icon preview-icon" aria-hidden="true"><use href="#icon-family"/></svg><span class="placeholder-title">Minha família</span><span class="placeholder-caption">Imagem do aplicativo em breve</span></div>
+
+              <div><img class="screenshot" src="assets/images/mobile/minha-familia.jpg" alt="Tela Minha família do Vitta com seleção de carteiras dos dependentes" width="420" height="840" loading="lazy"></div>
             </div>
             <figcaption><span class="figure-number">02</span><div><h3>Cada pessoa, sua carteira</h3><p>Alterne entre o seu perfil e os familiares vinculados à sua conta.</p></div></figcaption>
           </figure></div>
           <div class="col-md-4"><figure class="app-figure">
             <div class="screen-stage">
-              <!-- =========================================================
-                   [EDITAR DEPOIS] [05] PRINT DO APLICATIVO — NOTIFICAÇÕES
-                   Tela: Notificações. Documentação Mobile, p. 7.
-                   Caminho sugerido: assets/images/mobile/notificacoes.png
-                   Substituir o bloco .media-placeholder abaixo por:
-                   <img class="screenshot" src="assets/images/mobile/notificacoes.png"
-                        alt="Central de notificações do Vitta com atualizações da carteira"
-                        width="420" height="840" loading="lazy">
-              ========================================================= -->
-              <div class="media-placeholder app-placeholder"><svg class="icon preview-icon" aria-hidden="true"><use href="#icon-bell"/></svg><span class="placeholder-title">Notificações</span><span class="placeholder-caption">Imagem do aplicativo em breve</span></div>
+
+              <div><img class="screenshot" src="assets/images/mobile/notificacoes.jpg" alt="Central de notificações do Vitta com atualizações da carteira" width="420" height="840" loading="lazy"></div>
             </div>
             <figcaption><span class="figure-number">03</span><div><h3>Atenção às próximas doses</h3><p>Consulte os avisos relacionados à sua situação vacinal.</p></div></figcaption>
           </figure></div>
@@ -254,21 +232,18 @@ remova data-pending e o texto “Link em breve” / “Em breve”.
             </ul>
             <p class="integration-note">Os registros do painel integram a mesma estrutura de dados consultada no aplicativo.</p>
 
-            <a class="button button-white" href="https://vittaweb-production.up.railway.app/"><span>Acessar Painel Web</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
             <p class="panel-access-note">Acesso para profissionais autorizados · Projetado para desktop</p>
           </div>
           <div class="col-lg-7">
             <figure class="panel-figure">
-              <!-- =========================================================
-                   [EDITAR DEPOIS] [07] PRINT DO PAINEL WEB — DASHBOARD
-                   Tela: Dashboard. Documentação das Telas Web, p. 4 (PDF).
-                   Caminho sugerido: assets/images/painel/dashboard-profissional.png
-                   Substituir o bloco .media-placeholder abaixo por:
-                   <img class="screenshot panel-screenshot" src="assets/images/painel/dashboard-profissional.png"
-                        alt="Dashboard do Vitta com visão geral, aplicações recentes e ações para profissionais"
-                        width="1440" height="900" loading="lazy">
-              ========================================================= -->
-              <div class="media-placeholder panel-placeholder"><svg class="icon preview-icon" aria-hidden="true"><use href="#icon-monitor"/></svg><span class="placeholder-title">Visão geral do painel</span><span class="placeholder-caption">Imagem do ambiente profissional em breve</span></div>
+
+              <div class="panel-video-frame">
+                <div class="panel-video-toolbar" aria-hidden="true"><span></span><span></span><span></span></div>
+                <video class="demo-video panel-demo-video" autoplay muted loop playsinline preload="metadata" aria-label="Demonstração do ambiente profissional do Vitta">
+                  <source src="assets/videos/demo-painel-web.mp4" type="video/mp4">
+                  Seu navegador não suporta a reprodução deste vídeo.
+                </video>
+              </div>
               <figcaption><span class="small-dot" aria-hidden="true"></span> Aplicativo e painel. Informações conectadas.</figcaption>
             </figure>
           </div>
@@ -310,7 +285,26 @@ remova data-pending e o texto “Link em breve” / “Em breve”.
       </div>
     </section>
 
-    <!-- 08 · Equipe -->
+    <!-- 08 · Avalie -->
+    <section class="feedback-section" id="avalie" aria-labelledby="avalie-title">
+      <div class="container">
+        <div class="feedback-band">
+          <div class="feedback-copy">
+            <p class="eyebrow">Avalie o Vitta</p>
+            <h2 id="avalie-title">Avalie sua experiência com o Vitta.</h2>
+            <p>Testou o aplicativo? Sua opinião é importante para entendermos o que funciona bem e o que ainda pode melhorar. Responda nosso questionário e ajude a evoluir o Vitta.</p>
+          </div>
+          <div class="feedback-actions">
+            <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScBXfQCJvDW2axwwxEhP4bkhi1RSPgIOHphr8_38aPlPJkaCA/viewform?usp=sharing&amp;ouid=107312742165818027922" target="_blank" rel="noopener noreferrer" aria-describedby="avalie-link-note">
+              <span>Avaliar o Vitta</span><svg class="icon" aria-hidden="true"><use href="#icon-external"/></svg>
+            </a>
+            <p class="feedback-note" id="avalie-link-note">Google Forms · Abre em nova aba</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 · Equipe -->
     <section class="section-space team-section" id="equipe" aria-labelledby="equipe-title">
       <div class="container">
         <div class="section-heading">
@@ -334,12 +328,12 @@ remova data-pending e o texto “Link em breve” / “Em breve”.
     </section>
   </main>
 
-  <!-- 09 · Rodapé -->
+  <!-- 10 · Rodapé -->
   <footer class="site-footer" aria-label="Rodapé">
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand"><a href="#inicio" aria-label="Vitta — voltar ao início"><img src="assets/images/logo/logo-vitta-branca-compacta.svg" alt="Vitta" width="140" height="50" loading="lazy"></a><p>Vitta, sincronizando cuidado com a vida.</p></div>
-        <nav aria-label="Links do rodapé"><a href="#sobre">Sobre o projeto</a><a href="#painel">Painel Web</a><a href="#acompanhe">Instagram</a><a href="#equipe">Equipe</a><a href="downloads/Artigo_Cientifico_Vitta.pdf" target="_blank" rel="noopener">Artigo científico <span class="visually-hidden">(PDF, abre em nova aba)</span></a><a href="https://github.com/JMarcos212/vitta-site-oficial/releases/latest/download/vitta.apk" download>Baixar APK</a></nav>
+        <nav aria-label="Links do rodapé"><a href="#sobre">Sobre o projeto</a><a href="#painel">Painel Web</a><a href="#acompanhe">Instagram</a><a href="#avalie">Avalie o Vitta</a><a href="#equipe">Equipe</a><a href="downloads/Artigo_Cientifico_Vitta.pdf" target="_blank" rel="noopener">Artigo científico <span class="visually-hidden">(PDF, abre em nova aba)</span></a><a href="https://github.com/JMarcos212/vitta-site-oficial/releases/latest/download/vitta.apk" download>Baixar APK</a></nav>
       </div>
       <div class="footer-bottom"><p>Vitta · Projeto acadêmico · 2026</p><p>ETEC Dr. Júlio Cardoso · Franca-SP</p><a href="#inicio">Voltar ao início <span aria-hidden="true">↑</span></a></div>
     </div>
